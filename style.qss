@@ -1,0 +1,199 @@
+/* === 全局样式 === */
+QWidget {
+    background: #2a3a5a;  /* 单一深蓝色背景 */
+    /*background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #1a2a3a, stop:1 #2a3a5a);*/
+    color: #b0e0ff;
+    font: 10pt "Orbitron";
+    outline: none;
+    border: none;
+    background-clip: padding-box;
+}
+
+/* === 窗口边框 === */
+QMainWindow {
+
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+/* QSS 样式表示例 */
+#pushButton_6 {
+    min-width: 50px;
+    padding: 5px 5px;
+}
+#pushButton_7 {
+    min-width: 50px;
+    padding: 5px 5px;
+}
+
+/* === 按钮样式 === */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 rgba(0, 191, 255, 0.2),
+                stop:1 rgba(0, 128, 255, 0.3));
+    border: 1px solid #00bfff;
+    border-radius: 6px;
+    padding: 8px 15px;
+    min-width: 100px;
+    color: #e6f7ff;
+    font-weight: bold;
+}
+
+
+
+QDateEdit {
+    border: 1px solid #00bfff;
+    border-radius: 3px;
+    min-width: 120px;
+    color: #e6f7ff;
+    font-weight: bold;
+}
+
+QSpinBox {
+    border: 1px solid #00bfff;
+    padding: 8px 5px;
+    border-radius: 6px;
+    min-width: 80px;
+    color: #e6f7ff;
+    font-weight: bold;
+}
+
+
+/* === 输入框样式 === */
+QLineEdit, QComboBox {
+    background: rgba(173, 216, 230, 0.1);
+    border: 1px solid #00bfff;
+    border-radius: 5px;
+    color: #e6f7ff;
+    padding: 6px;
+}
+
+/* === 消除布局容器的"框感" === */
+QHBoxLayout, QGridLayout {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    color: #99d6ff;
+}
+
+
+/* === 消除布局容器的"框感" === */
+QVBoxLayout, QGridLayout {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* === 布局内控件样式 === */
+QHBoxLayout > QWidget,
+QGridLayout > QradioButton {
+
+    background: red;          /* 设置红色背景 */
+    border: none;             /* 无边框 */
+    outline: none;            /* 取消焦点轮廓 */
+}
+
+
+
+
+/* === 标签样式 === */
+QLabel {
+    color: #99d6ff;
+    text-shadow: 0 0 4px rgba(0, 191, 255, 0.5);
+    border: none;
+    background: transparent;
+    padding: 2px;
+}
+
+/* === 标题标签特殊样式 === */
+QLabel#title {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 6px rgba(0, 255, 255, 0.7);
+}
+
+/* === QTabWidget 样式（科技感标签页） === */
+QTabWidget::pane {
+    border: 1px solid #00bfff;
+    background: rgba(16, 32, 64, 0.5);
+    border-radius: 4px;
+}
+
+QTabBar::tab {
+    background: rgba(0, 128, 255, 0.2);
+    border: 1px solid #00bfff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 6px 12px;
+    color: #b0e0ff;
+}
+
+QTabBar::tab:selected {
+    background: rgba(0, 191, 255, 0.4);
+    color: white;
+    text-shadow: 0 0 4px rgba(0, 255, 255, 0.6);
+}
+
+/* === QTableWidget 样式（蓝白网格 + 选中高亮） === */
+QTableWidget {
+    gridline-color: #00bfff;
+    background: rgba(16, 32, 64, 0.3);
+    alternate-background-color: rgba(255, 255, 255, 0.05);
+    selection-background-color: rgba(0, 191, 255, 0.3);
+    color: #e6f7ff;
+    border: 1px solid #00bfff; /* 可选：如果需要外边框 */
+    border-radius: 4px; /* 可选：圆角 */
+}
+
+QHeaderView::section {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #006496, stop:1 #004b70);
+    color: white;
+    border: 1px solid #00bfff;
+    padding: 5px;
+}
+
+
+
+
+/* === 单选按钮（QRadioButton）样式 === */
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 255, 255, 0.2); /* 未选中时的背景色 */
+    border: 1px solid #00bfff; /* 红色边框 */
+    border-radius: 8px; /* 圆形勾选框 */
+}
+
+QRadioButton::indicator:checked {
+    background: rgba(255, 0, 0, 0.8); /* 选中时的背景色 */
+    border: 1px solid #ff0000;
+}
+
+
+/* 可选：禁用动画（如果 Qt 支持） */
+QRadioButton::indicator {
+    qproperty-animation: none;
+    transition: none;
+}
+
+
+/* 单独设置 objectName 为 specialButton 的按钮 */
+QPushButton#pushButton_6 {
+    min-width: 15px; /* 覆盖全局样式 */
+    padding: 1px 1px;
+    border: none;
+}
+
+
+/* === 按钮样式 === */
+QPushButton#pushButton5 {
+
+    color: #FF0000;  /* 红色字体（十六进制颜色码） */
+
+}

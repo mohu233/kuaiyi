@@ -1,0 +1,16 @@
+release/funds.o
+release/logindialog.o
+release/main.o
+release/mainwindow.o
+release/number.o
+release/recharge.o
+release/subwindow.o
+release/tcpclient.o
+release/qrc_images.o
+release/moc_funds.o
+release/moc_logindialog.o
+release/moc_mainwindow.o
+release/moc_number.o
+release/moc_recharge.o
+release/moc_subwindow.o
+release/moc_tcpclient.o
